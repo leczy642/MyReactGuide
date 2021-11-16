@@ -16,6 +16,7 @@ const [state, setState] = useState('');
 //the data displayed from the server is determined by value in the ${resourceType} state
 //the dollar sign and curly braces are allows the state values to be used in the url on the fly
 //**interpolate**
+//specific data from the server is displayed as a side effect of the state change in resourceType state
 useEffect(() => {
   fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
   .then(response => response.json())
