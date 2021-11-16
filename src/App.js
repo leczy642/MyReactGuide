@@ -20,6 +20,16 @@ useEffect(() => {
   fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
   .then(response => response.json())
   .then(json => setItems(json))
+
+  //implement a cleanup return function to cleanup any previous sideeffects
+  //this is called when the component is unmounted
+  //this prevents a previous side effect from being rendered after the component is unmounted
+  //it also previous a previous side effect from interfering with the current side effect
+  return() => {
+    //cleanup
+    //we do cleanup by setting the items to an empty array
+    setItems([])
+  }
 }, [resourceType]);
 
 
