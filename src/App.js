@@ -41,6 +41,7 @@ useEffect(() => {
       <button onClick={() => setresourceType('users')}>Users</button>
       <button onClick={() => setresourceType('comments')}>Comments</button>
       <button onClick={() => setState('test')}>Test</button>
+      {/**displaying resourceType*/}
       <div>{resourceType}</div>
       <div>
         {/**we are mapping the elements from the items state and return them in JSON*/}
