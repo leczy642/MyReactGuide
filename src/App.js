@@ -13,7 +13,7 @@ const [items, setItems] = useState([]);
 const [state, setState] = useState('');
 
 //we use useEffect to fetch data from the server
-//the data displayed from the server is determined by value in the ${resourceType} state
+//the data displayed from the server is determined by value in the ${resourceType} state through interpolation
 //the dollar sign and curly braces are allows the state values to be used in the url on the fly
 //**interpolate**
 //specific data from the server is displayed as a side effect of the state change in resourceType state
